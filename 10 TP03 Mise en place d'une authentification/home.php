@@ -1,0 +1,55 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit();
+}
+
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+	<title>Home</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mes séries préférées</a>
+    	<div>
+        <form action="logout.php" method="post" class="btn btn-outline-secondary my-2 my-sm-0">
+
+        <button type="submit" name="logout" class="fas fa-sign-out-alt">logout</button>
+    	</div>
+
+    </form>
+  </nav>
+  <div class="container">
+
+    <header class="jumbotron my-4">
+      <h1 class="display-3">placeholder</h1>
+      <p class="lead">placeholder</p>
+      <a href="#" class="btn btn-primary btn-lg">placeholder</a>
+    </header>
+
+  </div>
+ 
+ 
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+  </footer>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
